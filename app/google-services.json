@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "779700507573",
+    "project_id": "mach-3-3fb3d",
+    "storage_bucket": "mach-3-3fb3d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779700507573:android:10a090b77e8290e960fffc",
+        "android_client_info": {
+          "package_name": "com.nyller.android.mach3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779700507573-ra8vbrrtknu5fu0fqj6a7eercnjnt9bj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nyller.android.mach3",
+            "certificate_hash": "44a10a08d4bb9d3eec34191f824f28e92de42cad"
+          }
+        },
+        {
+          "client_id": "779700507573-p6p6d34f226jupus9hk0ip9snlk3e0hs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCj4LSnQlkZmiklkyURMk1YEAVO3_Ezpk4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779700507573-p6p6d34f226jupus9hk0ip9snlk3e0hs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

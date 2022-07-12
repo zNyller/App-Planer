@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Mach 3</string>
+    <string name="habitos">Hábitos</string>
+    <string name="hoje">Hoje</string>
+    <string name="manha">Manhã</string>
+    <string name="tarde">Tarde</string>
+    <string name="noite">Noite</string>
+    <string name="criar">Criar</string>
+    <string name="qualquer_hora">Qualquer hora</string>
+    <string name="turno">Turno</string>
+    <string name="dom">Dom</string>
+    <string name="sab">Sab</string>
+    <string name="sex">Sex</string>
+    <string name="qui">Qui</string>
+    <string name="qua">Qua</string>
+    <string name="ter">Ter</string>
+    <string name="seg">Seg</string>
+    <string name="dias_da_semana">Dias da semana</string>
+    <string name="categoria">Categoria</string>
+    <string name="ex_exercicios">Ex: Fazer exercícios</string>
+    <string name="nome">Nome</string>
+    <string name="boa_noite">Boa noite</string>
+    <string name="ficar_em_forma">Ficar em forma</string>
+    <string name="lar_doce_lar">Lar doce lar</string>
+    <string name="financas">Finanças</string>
+    <string name="novo_habito">Novo hábito</string>
+    <string name="corpo_e_mente"><![CDATA[Corpo & Mente]]></string>
+    <string name="foco_e_mindset"><![CDATA[Foco & Mindset]]></string>
+    <string name="home">Home</string>
+    <string name="stats">Stats</string>
+    <string name="calendario">Calendário</string>
+    <string name="config">Config</string>
+</resources>

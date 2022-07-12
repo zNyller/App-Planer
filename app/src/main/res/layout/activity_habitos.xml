@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_700"
+    tools:context=".activities.HabitosActivity">
+
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/include2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearRoot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonNovoHabito"
+                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="12dp"
+                android:paddingStart="30dp"
+                android:text="@string/novo_habito"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/light_black"
+                app:icon="@drawable/ic_baseline_add_48"
+                app:iconTint="@color/teal_700"
+                app:iconGravity="textEnd"
+                app:iconPadding="15dp"
+                app:iconSize="52dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeColor="@color/black"
+                app:strokeWidth="3dp">
+
+            </com.google.android.material.button.MaterialButton>
+
+            <TextView
+                android:id="@+id/textSugestoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="      Sugestões      "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonNovoHabito" />
+
+            <TextView
+                android:id="@+id/textlinha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@color/white"
+                android:textColor="@color/white"
+                android:textSize="1sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/textSugestoes"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonNovoHabito" />
+
+            <TextView
+                android:id="@+id/textLinha2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/white"
+                android:textSize="1sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textSugestoes"
+                app:layout_constraintTop_toBottomOf="@+id/buttonNovoHabito" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/borda_arredondada"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textSugestoes">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonCorpoMente"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:padding="12dp"
+                    android:text="@string/corpo_e_mente"
+                    android:textColor="@color/verde"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ca_baseline_self_improvement_36"
+                    app:iconSize="36dp"
+                    app:iconGravity="end"
+                    app:iconTint="@color/verde"
+                    app:strokeColor="@color/verde"
+                    app:strokeWidth="3dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonFoco"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:padding="12dp"
+                    android:text="@string/foco_e_mindset"
+                    android:textColor="@color/teal_200"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_baseline_psychology_24"
+                    app:iconTint="@color/blue_500"
+                    app:iconGravity="end"
+                    app:strokeColor="@color/blue_500"
+                    app:strokeWidth="3dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonFinancas"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:padding="12dp"
+                    android:text="@string/financas"
+                    android:textColor="@color/amarelo"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_baseline_money"
+                    app:iconGravity="end"
+                    app:iconTint="@color/amarelo"
+                    app:strokeColor="@color/amarelo"
+                    app:strokeWidth="3dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonBoaNoite"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:padding="12dp"
+                    android:text="@string/boa_noite"
+                    android:textColor="@color/roxo"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_baseline_bedtime_36"
+                    app:iconGravity="end"
+                    app:iconTint="@color/roxo"
+                    app:strokeColor="@color/roxo"
+                    app:strokeWidth="3dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonForma"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:padding="12dp"
+                    android:text="@string/ficar_em_forma"
+                    android:textColor="@color/laranja"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_baseline_run_36"
+                    app:iconGravity="end"
+                    app:iconTint="@color/laranja"
+                    app:strokeColor="@color/laranja"
+                    app:strokeWidth="3dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonLar"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="@string/lar_doce_lar"
+                    android:textColor="@color/rosa"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_baseline_house_36"
+                    app:iconGravity="end"
+                    app:iconTint="@color/rosa"
+                    app:strokeColor="@color/rosa"
+                    app:strokeWidth="3dp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

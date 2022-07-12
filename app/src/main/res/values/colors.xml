@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_900">#231F29</color>
+    <color name="purple_800">#3E3747</color>
+    <color name="purple_200">#666CC2</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#140D25</color>
+    <color name="teal_200">#03C1DA</color>
+    <color name="teal_700">#027675</color>
+    <color name="teal_900">#03464D</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="light_gray">#9A9A9A</color>
+
+    // Minhas cores
+
+    <color name="blue_500">#0FD1EB</color>
+    <color name="blue_700">#0E1726</color>
+    <color name="blue_900">#234E7B</color>
+    <color name="light_black">#5D000000</color>
+    <color name="verde">#3CF677</color>
+    <color name="verdin">#0CE8AD</color>
+    <color name="verdin2">#00FFBB</color>
+    <color name="amarelo">#D6DA03</color>
+    <color name="roxo">#291E82</color>
+    <color name="laranja">#DA4E03</color>
+    <color name="rosa">#D9338C</color>
+
+</resources>
