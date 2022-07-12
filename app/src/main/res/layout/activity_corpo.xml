@@ -8,7 +8,6 @@
     tools:context=".activities.CorpoActivity">
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="10dp"

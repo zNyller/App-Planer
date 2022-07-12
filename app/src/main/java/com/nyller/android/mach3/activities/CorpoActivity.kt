@@ -3,7 +3,6 @@ package com.nyller.android.mach3.activities
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.nyller.android.mach3.databinding.ActivityCorpoBinding
-import com.nyller.android.mach3.databinding.ActivityMainBinding
 
 class CorpoActivity : AppCompatActivity() {
     private lateinit var binding : ActivityCorpoBinding

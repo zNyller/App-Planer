@@ -24,7 +24,6 @@
         app:layout_constraintTop_toBottomOf="@id/include">
 
         <LinearLayout
-            android:id="@+id/linearLayout3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -45,6 +44,7 @@
                 android:background="@drawable/borda_arredondada_textos"
                 android:text="@string/nome"
                 android:textAlignment="center"
+                android:textColor="@color/light_gray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -71,6 +71,7 @@
                 android:background="@color/purple_700"
                 android:text="@string/categoria"
                 android:textAlignment="center"
+                android:textColor="@color/light_gray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -89,6 +90,7 @@
                 android:background="@color/purple_700"
                 android:text="@string/dias_da_semana"
                 android:textAlignment="center"
+                android:textColor="@color/light_gray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -227,6 +229,7 @@
                 android:background="@color/purple_700"
                 android:text="@string/turno"
                 android:textAlignment="center"
+                android:textColor="@color/light_gray"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
