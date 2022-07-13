@@ -1,8 +1,10 @@
 package com.nyller.android.mach3
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
+import com.nyller.android.mach3.activities.HabitosActivity
 import com.nyller.android.mach3.databinding.FragmentHomeBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,15 +15,14 @@ class MainActivity : AppCompatActivity() {
         binding = FragmentHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(
-            binding.navHostFragment.id) as NavHostFragment
-        val navController = navHostFragment.navController
-
     }
 
     override fun onStart() {
         super.onStart()
 
+        binding.imageButton.setOnClickListener {
+            startActivity(Intent(this, HabitosActivity::class.java))
+        }
 
     }
 

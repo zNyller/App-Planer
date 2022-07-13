@@ -31,6 +31,10 @@ class HabitosActivity : AppCompatActivity() {
             startActivity(Intent(this, CorpoActivity::class.java))
         }
 
+        binding.buttonFoco.setOnClickListener {
+            startActivity(Intent(this, FocoActivity::class.java))
+        }
+
     }
 
     override fun onSupportNavigateUp(): Boolean {

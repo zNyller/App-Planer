@@ -30,4 +30,10 @@
     <string name="stats">Stats</string>
     <string name="calendario">Calendário</string>
     <string name="config">Config</string>
+    <string name="escreva_no_diario">Escreva no diário</string>
+    <string name="organizar_emails">Organizar e-mails</string>
+    <string name="pratique_visualizacoes">Pratique visualizações</string>
+    <string name="refletir_sobre_o_dia">Refletir sobre o dia</string>
+    <string name="ler_20_paginas">Ler 20 páginas</string>
+    <string name="aprenda_algo_novo">Aprenda algo novo</string>
 </resources>
