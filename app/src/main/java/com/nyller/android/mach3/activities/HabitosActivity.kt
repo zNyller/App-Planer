@@ -25,6 +25,7 @@ class HabitosActivity : AppCompatActivity() {
 
         binding.buttonNovoHabito.setOnClickListener {
             startActivity(Intent(this, NovoHabitoActivity::class.java))
+            finish()
         }
 
         binding.buttonCorpoMente.setOnClickListener {

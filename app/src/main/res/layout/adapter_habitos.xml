@@ -3,17 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/tvTurno"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue_500"
+        android:background="@color/blue_700"
         android:text="Turno"
         android:textAlignment="center"
-        android:textColor="@color/amarelo"
-        android:textSize="34sp"
+        android:textColor="@color/light_gray"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -27,20 +28,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@color/light_gray"
+            android:background="@color/purple_200"
+            android:padding="8dp"
             android:text="Categoria"
-            android:textSize="24sp"
+            android:textAlignment="center"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvNomeHabito"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/teal_900"
+            android:layout_weight="2"
+            android:background="@color/teal_700"
+            android:padding="8dp"
             android:text="Habito"
             android:textAlignment="center"
-            android:textSize="24sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
     </LinearLayout>
 </LinearLayout>

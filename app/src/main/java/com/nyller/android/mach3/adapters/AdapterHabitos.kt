@@ -31,7 +31,7 @@ class AdapterHabitos(private val items : List<Habito> = ArrayList()) : RecyclerV
     class MyViewHolder(itemView: AdapterHabitosBinding) : RecyclerView.ViewHolder(itemView.root) {
         val habitoTurno = itemView.tvTurno
         val habitoCategoria = itemView.tvCategoria
-        val habitoNome = itemView.tvCategoria
+        val habitoNome = itemView.tvNomeHabito
 
     }
 

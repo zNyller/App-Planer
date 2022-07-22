@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/edusa/.gradle/caches/transforms-3/d1e8b6226586f942970a3b114068a665/transformed/material-1.6.1/res/drawable/ic_mtrl_chip_checked_black.xml" value="0.1325" />
         <entry key="..\:/Users/edusa/AndroidStudioProjects/Mach3/app/src/main/res/drawable-v24/bg_radio_button.xml" value="0.1305" />
         <entry key="..\:/Users/edusa/AndroidStudioProjects/Mach3/app/src/main/res/drawable-v24/borda_arredondada.xml" value="0.1305" />
         <entry key="..\:/Users/edusa/AndroidStudioProjects/Mach3/app/src/main/res/drawable-v24/borda_arredondada_textos.xml" value="0.1305" />
@@ -28,6 +29,7 @@
         <entry key="..\:/Users/edusa/AndroidStudioProjects/Mach3/app/src/main/res/layout/fragment_estatisticas.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/edusa/AndroidStudioProjects/Mach3/app/src/main/res/layout/fragment_home.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/edusa/AndroidStudioProjects/Mach3/app/src/main/res/layout/fragment_user.xml" value="0.23958333333333334" />
+        <entry key="..\:/Users/edusa/AndroidStudioProjects/Mach3/app/src/main/res/layout/teste.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/edusa/AndroidStudioProjects/Mach3/app/src/main/res/layout/toolbar.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/edusa/AndroidStudioProjects/Mach3/app/src/main/res/layout/toolbar_categorias.xml" value="0.23958333333333334" />
         <entry key="..\:/Users/edusa/AndroidStudioProjects/Mach3/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.23958333333333334" />

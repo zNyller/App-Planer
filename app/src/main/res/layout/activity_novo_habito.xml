@@ -57,7 +57,6 @@
                 android:layout_marginEnd="40dp"
                 android:layout_marginBottom="30dp"
                 android:background="@drawable/borda_botao_arredondada"
-                android:ems="10"
                 android:hint="@string/ex_exercicios"
                 android:inputType="textPersonName"
                 android:padding="10dp"
@@ -76,7 +75,7 @@
                 android:textStyle="bold" />
 
             <ImageView
-                android:id="@+id/buttonCategoria"
+                android:id="@+id/btnCategoria"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_gravity="center"
@@ -102,14 +101,14 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/buttonSegunda"
+                    android:id="@+id/cbSegunda"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_radio_button"
                     android:button="@null"
-                    android:padding="12dp"
+                    android:padding="10dp"
                     android:text="@string/seg"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -117,14 +116,14 @@
                     android:textSize="14sp" />
 
                 <CheckBox
-                    android:id="@+id/buttonTerca"
+                    android:id="@+id/cbTerca"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_radio_button"
                     android:button="@null"
-                    android:padding="12dp"
+                    android:padding="10dp"
                     android:text="@string/ter"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -132,14 +131,14 @@
                     android:textSize="14sp" />
 
                 <CheckBox
-                    android:id="@+id/buttonQuarta"
+                    android:id="@+id/cbQuarta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_radio_button"
                     android:button="@null"
-                    android:padding="12dp"
+                    android:padding="10dp"
                     android:text="@string/qua"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -149,13 +148,13 @@
 
 
                 <CheckBox
-                    android:id="@+id/buttonQuinta"
+                    android:id="@+id/cbQuinta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bg_radio_button"
                     android:button="@null"
-                    android:padding="12dp"
+                    android:padding="10dp"
                     android:text="@string/qui"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -177,14 +176,14 @@
                 android:paddingEnd="12dp">
 
                 <CheckBox
-                    android:id="@+id/buttonSexta"
+                    android:id="@+id/cbSexta"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_radio_button"
                     android:button="@null"
-                    android:padding="12dp"
+                    android:padding="10dp"
                     android:text="@string/sex"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -192,14 +191,14 @@
                     android:textSize="14sp" />
 
                 <CheckBox
-                    android:id="@+id/buttonSabado"
+                    android:id="@+id/cbSabado"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="2dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_radio_button"
                     android:button="@null"
-                    android:padding="12dp"
+                    android:padding="10dp"
                     android:text="@string/sab"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -207,13 +206,13 @@
                     android:textSize="14sp" />
 
                 <CheckBox
-                    android:id="@+id/buttonDomingo"
+                    android:id="@+id/cbDomingo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/bg_radio_button"
                     android:button="@null"
-                    android:padding="12dp"
+                    android:padding="10dp"
                     android:text="@string/dom"
                     android:textAlignment="center"
                     android:textAllCaps="false"
@@ -234,7 +233,7 @@
                 android:textStyle="bold" />
 
             <RadioGroup
-                android:id="@+id/radioTurnos"
+                android:id="@+id/rgTurnos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -243,7 +242,7 @@
                 android:paddingTop="5dp">
 
                 <RadioButton
-                    android:id="@+id/buttonQualquerHora"
+                    android:id="@+id/rbQualquerHora"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -258,7 +257,7 @@
                     android:textSize="14sp" />
 
                 <RadioButton
-                    android:id="@+id/buttonManha"
+                    android:id="@+id/rbManha"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -273,7 +272,7 @@
                     android:textSize="14sp" />
 
                 <RadioButton
-                    android:id="@+id/buttonTarde"
+                    android:id="@+id/rbTarde"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -288,7 +287,7 @@
                     android:textSize="14sp" />
 
                 <RadioButton
-                    android:id="@+id/buttonNoite"
+                    android:id="@+id/rbNoite"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
