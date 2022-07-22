@@ -11,10 +11,10 @@ import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.nyller.android.mach3.MainActivity
-import com.nyller.android.mach3.R
 import com.nyller.android.mach3.databinding.ActivityCadastroBinding
 import com.nyller.android.mach3.models.User
-import com.nyller.android.mach3.toast
+import com.nyller.android.mach3.models.saveInDb
+import com.nyller.android.mach3.utils.toast
 
 class CadastroActivity : AppCompatActivity() {
     private lateinit var binding : ActivityCadastroBinding
@@ -61,6 +61,7 @@ class CadastroActivity : AppCompatActivity() {
                     val idUsuario = task.result.user?.uid
                     user.id = idUsuario
                     "Sucesso ao cadastrar!".toast(this)
+                    saveInDb(user)
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 }

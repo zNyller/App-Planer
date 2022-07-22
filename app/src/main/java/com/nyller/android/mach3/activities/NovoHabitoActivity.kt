@@ -6,7 +6,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
 import com.nyller.android.mach3.databinding.ActivityNovoHabitoBinding
-import com.nyller.android.mach3.toast
+import com.nyller.android.mach3.utils.toast
 
 class NovoHabitoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNovoHabitoBinding

@@ -8,10 +8,9 @@ import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 import com.google.firebase.auth.FirebaseAuthInvalidUserException
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.nyller.android.mach3.MainActivity
 import com.nyller.android.mach3.databinding.ActivityLoginBinding
 import com.nyller.android.mach3.models.User
-import com.nyller.android.mach3.toast
+import com.nyller.android.mach3.utils.toast
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -25,6 +24,11 @@ class LoginActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+    }
+
+    override fun onStart() {
+        super.onStart()
+
         binding.btnLogin.setOnClickListener {
             validarCampos()
         }
@@ -32,6 +36,12 @@ class LoginActivity : AppCompatActivity() {
         binding.tvCadastrar.setOnClickListener {
             startActivity(Intent(this, CadastroActivity::class.java))
             finish()
+        }
+
+        val currentUser = auth.currentUser
+
+        if (currentUser != null) {
+            reload()
         }
 
     }
@@ -47,6 +57,7 @@ class LoginActivity : AppCompatActivity() {
                 loginUser()
             }else { "Insira sua senha!".toast(this) }
         }else { "Insira seu e-mail!".toast(this) }
+
     }
 
     private fun loginUser() {
@@ -67,24 +78,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun openMainActivity() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, NavActivity::class.java))
         "Sucesso ao logar!".toast(this)
         finish()
     }
 
-    override fun onStart() {
-        super.onStart()
-
-        val currentUser = auth.currentUser
-
-        if (currentUser != null) {
-            reload()
-        }
-
-    }
-
     private fun reload() {
-        startActivity(Intent(this, MainActivity::class.java))
+        startActivity(Intent(this, NavActivity::class.java))
         finish()
     }
 

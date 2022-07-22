@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/menuHome">
+
+    <fragment
+        android:id="@+id/menu_nav"
+        android:name="com.nyller.android.mach3.activities.ui.home.HomeFragment"
+        android:label="Today" />
+
+    <fragment
+        android:id="@+id/menuHome"
+        android:name="com.nyller.android.mach3.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_menuHome_to_menuStats"
+            app:destination="@id/menuStats" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuStats"
+        android:name="com.nyller.android.mach3.fragments.StatsFragment"
+        android:label="StatsFragment" >
+        <action
+            android:id="@+id/action_menuStats_to_menuCalendario"
+            app:destination="@id/menuCalendario" />
+        <action
+            android:id="@+id/action_menuStats_to_menuHome"
+            app:destination="@id/menuHome" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuCalendario"
+        android:name="com.nyller.android.mach3.fragments.CalendarFragment"
+        android:label="CalendarFragment" >
+        <action
+            android:id="@+id/action_menuCalendario_to_menuConfig"
+            app:destination="@id/menuConfig" />
+        <action
+            android:id="@+id/action_menuCalendario_to_menuStats"
+            app:destination="@id/menuStats"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/menuConfig"
+        android:name="com.nyller.android.mach3.fragments.ConfigFragment"
+        android:label="ConfigFragment" >
+        <action
+            android:id="@+id/action_menuConfig_to_menuCalendario"
+            app:destination="@id/menuCalendario" />
+    </fragment>
+
+</navigation>

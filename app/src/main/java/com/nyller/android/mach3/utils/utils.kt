@@ -1,4 +1,4 @@
-package com.nyller.android.mach3
+package com.nyller.android.mach3.utils
 
 import android.content.Context
 import android.widget.Toast

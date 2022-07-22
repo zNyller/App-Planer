@@ -43,4 +43,11 @@
     <string name="mach_3">Mach 3</string>
     <string name="senha">Senha</string>
     <string name="cadastrar">Cadastrar</string>
+    <string name="title_activity_nav">NavActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="configuracoes">Configurações</string>
+    <string name="sair">Sair</string>
+    <string name="deslogar">Deslogar</string>
 </resources>
