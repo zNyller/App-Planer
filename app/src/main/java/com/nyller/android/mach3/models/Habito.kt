@@ -7,3 +7,4 @@ data class Habito(
     var turno : String ?= null,
     var categoria : String ?= null
 ): Serializable
+

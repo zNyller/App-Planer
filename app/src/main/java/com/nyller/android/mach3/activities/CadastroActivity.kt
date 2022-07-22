@@ -62,7 +62,7 @@ class CadastroActivity : AppCompatActivity() {
                     user.id = idUsuario
                     "Sucesso ao cadastrar!".toast(this)
                     saveInDb(user)
-                    startActivity(Intent(this, MainActivity::class.java))
+                    startActivity(Intent(this, NavActivity::class.java))
                     finish()
                 }
             }?.addOnFailureListener { exception ->

@@ -37,7 +37,8 @@
             android:layout_gravity="end"
             android:background="@drawable/circulo_botao"
             app:srcCompat="@drawable/ic_add_24"
-            app:tint="@color/purple_700" />
+            app:tint="@color/purple_700"
+            android:contentDescription="@string/novo_habito" />
     </LinearLayout>
 
     <LinearLayout
@@ -66,18 +67,17 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <TextView
+        <View
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:background="@color/white"
-            android:textSize="1sp" />
+            android:layout_height="1dp"
+            android:background="@color/white" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerHabitos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="36dp" />
 
     </LinearLayout>
 

@@ -4,15 +4,16 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import com.nyller.android.mach3.databinding.ActivityNovoHabitoBinding
 import com.nyller.android.mach3.utils.toast
 
 class NovoHabitoActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNovoHabitoBinding
     private var categoria = ""
-
-    private val db = FirebaseFirestore.getInstance()
+    private var turno = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,15 +36,36 @@ class NovoHabitoActivity : AppCompatActivity() {
         }
 
         binding.btnCriar.setOnClickListener {
-            saveData()
-            finish()
+            setTurn()
+            validarCampos()
         }
 
     }
 
+    private fun setTurn() {
+        val rb = binding.rgTurnos.checkedRadioButtonId
+
+        if (rb == binding.rbQualquerHora.id) turno = "Qualquer hora"
+        if (rb == binding.rbManha.id) turno = "Manhã"
+        if (rb == binding.rbTarde.id) turno = "Tarde"
+        if (rb == binding.rbNoite.id) turno = "Noite"
+    }
+
+    private fun validarCampos() {
+        if (binding.editNomeHabito.text.isNotEmpty()) {
+            if (categoria.isNotEmpty()) {
+                if (turno.isNotEmpty()) {
+                    saveData()
+                    "Habito criado!".toast(this)
+                    finish()
+                } else { "Defina um turno!".toast(this) }
+            } else { "Defina uma categoria!".toast(this ) }
+        } else { "Defina um nome!".toast(this) }
+    }
+
     private fun setCategory() {
 
-        val categorias = arrayOf("Corpo e mente", "Foco", "Finanças")
+        val categorias = arrayOf("Corpo e mente", "Foco", "Finanças", "Rotina noturna", "Atividade fisica", "Organização")
 
         val dialog = AlertDialog.Builder(this)
             .setTitle("Selecione a categoria")
@@ -69,26 +91,25 @@ class NovoHabitoActivity : AppCompatActivity() {
         if (binding.cbSabado.isChecked) configs += 5
         if (binding.cbDomingo.isChecked) configs += 6
 
-        var turno = ""
-        val rb = binding.rgTurnos.checkedRadioButtonId
-
-        if (rb == binding.rbQualquerHora.id) turno = "Qualquer hora"
-        if (rb == binding.rbManha.id) turno = "Manhã"
-        if (rb == binding.rbTarde.id) turno = "Tarde"
-        if (rb == binding.rbNoite.id) turno = "Noite"
-
         val habitosMap = hashMapOf(
             "nome" to binding.editNomeHabito.text.toString(),
             "turno" to turno,
             "categoria" to categoria
         )
 
-        db.collection("habitos").add(habitosMap)
-            .addOnCompleteListener {
-                Log.i("Db Firestore", "Sucesso ao salvar dados!")
-            }.addOnFailureListener {
-                Log.i("Erro Firestore", "Erro ao salvar dados!")
-            }
+        val db = Firebase.firestore
+        val usuarioAtual = FirebaseAuth.getInstance().currentUser?.uid
+        val docRef = usuarioAtual?.let { idUser ->
+            db.collection("usuarios").document(idUser) }
+
+        usuarioAtual?.let {
+            docRef?.collection("meus_habitos")?.add(habitosMap)
+                ?.addOnCompleteListener {
+                    Log.i("Db Firestore", "Sucesso ao salvar dados!")
+                }?.addOnFailureListener {
+                    Log.i("Erro Firestore", "Erro ao salvar dados!")
+                }
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
