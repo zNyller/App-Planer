@@ -1,15 +1,10 @@
 package com.nyller.android.mach3.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.CheckBox
-import android.widget.RadioButton
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.firestore.FirebaseFirestore
-import com.nyller.android.mach3.R
 import com.nyller.android.mach3.databinding.ActivityNovoHabitoBinding
 import com.nyller.android.mach3.toast
 

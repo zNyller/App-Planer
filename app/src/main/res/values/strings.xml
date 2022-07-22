@@ -36,4 +36,11 @@
     <string name="refletir_sobre_o_dia">Refletir sobre o dia</string>
     <string name="ler_20_paginas">Ler 20 páginas</string>
     <string name="aprenda_algo_novo">Aprenda algo novo</string>
+    <string name="habito">Habito</string>
+    <string name="e_mail">E-mail</string>
+    <string name="login">Login</string>
+    <string name="cadastre_se">Cadastre-se</string>
+    <string name="mach_3">Mach 3</string>
+    <string name="senha">Senha</string>
+    <string name="cadastrar">Cadastrar</string>
 </resources>
