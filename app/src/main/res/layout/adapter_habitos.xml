@@ -1,49 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/tvTurno"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blue_700"
-        android:text="@string/turno"
-        android:textAlignment="center"
-        android:textColor="@color/light_gray"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+    android:layout_margin="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/tvCategoria"
-            android:layout_width="wrap_content"
+            android:id="@+id/tvTurno"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/purple_200"
-            android:padding="8dp"
-            android:text="@string/categoria"
+            android:background="@color/blue_700"
+            android:text="@string/turno"
             android:textAlignment="center"
-            android:textSize="16sp"
+            android:textColor="@color/light_gray"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvNomeHabito"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:background="@color/teal_700"
-            android:padding="8dp"
-            android:text="@string/habito"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:maxHeight="62dp" >
+
+            <TextView
+                android:id="@+id/tvCategoria"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:background="@color/purple_200"
+                android:gravity="center"
+                android:text="@string/categoria"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvNomeHabito"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@color/teal_700"
+                android:gravity="center"
+                android:text="@string/habito"
+                android:textColor="@color/white"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
     </LinearLayout>
-</LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

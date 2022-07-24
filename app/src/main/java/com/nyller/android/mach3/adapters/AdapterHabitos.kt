@@ -24,15 +24,12 @@ class AdapterHabitos(private val items : List<Habito> = ArrayList()) : RecyclerV
         }
     }
 
-    override fun getItemCount(): Int {
-        return items.size
-    }
+    override fun getItemCount() = items.size
 
     class MyViewHolder(itemView: AdapterHabitosBinding) : RecyclerView.ViewHolder(itemView.root) {
         val habitoTurno = itemView.tvTurno
         val habitoCategoria = itemView.tvCategoria
         val habitoNome = itemView.tvNomeHabito
-
     }
 
 }

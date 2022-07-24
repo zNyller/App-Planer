@@ -50,4 +50,7 @@
     <string name="configuracoes">Configurações</string>
     <string name="sair">Sair</string>
     <string name="deslogar">Deslogar</string>
+    <string name="estatisticas">Estatísticas</string>
+    <string name="bem_estar">Bem estar</string>
+    <string name="foco">Foco</string>
 </resources>
