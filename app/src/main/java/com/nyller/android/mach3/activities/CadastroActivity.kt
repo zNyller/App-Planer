@@ -1,8 +1,8 @@
 package com.nyller.android.mach3.activities
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
@@ -10,7 +10,6 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException
 import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
-import com.nyller.android.mach3.MainActivity
 import com.nyller.android.mach3.databinding.ActivityCadastroBinding
 import com.nyller.android.mach3.models.User
 import com.nyller.android.mach3.models.saveInDb

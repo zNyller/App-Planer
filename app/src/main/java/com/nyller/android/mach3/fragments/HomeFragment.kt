@@ -7,13 +7,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
+import com.google.firebase.firestore.EventListener
 import com.nyller.android.mach3.activities.HabitosActivity
 import com.nyller.android.mach3.adapters.AdapterHabitos
 import com.nyller.android.mach3.databinding.FragmentHomeBinding
 import com.nyller.android.mach3.models.Habito
+import com.nyller.android.mach3.utils.toast
+import java.util.*
 
 class HomeFragment : Fragment() {
     private lateinit var binding: FragmentHomeBinding
@@ -37,9 +42,7 @@ class HomeFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        binding.imageButton.setOnClickListener {
-            startActivity(Intent(activity, HabitosActivity::class.java))
-        }
+        binding.btnHabito.setOnClickListener { startActivity(Intent(activity, HabitosActivity::class.java)) }
 
         // Configurar Recycler
         binding.recyclerHabitos
@@ -53,6 +56,7 @@ class HomeFragment : Fragment() {
         binding.recyclerHabitos.adapter = adapterHabitos
 
         eventChangeListener()
+        swipe()
 
     }
 
@@ -79,4 +83,38 @@ class HomeFragment : Fragment() {
             })
     }
 
+    private fun swipe() {
+
+        val swipeHandler = object : ItemTouchHelper.SimpleCallback(
+            ItemTouchHelper.UP or ItemTouchHelper.DOWN,
+            ItemTouchHelper.START or ItemTouchHelper.END
+        ) {
+            override fun onMove(
+                recyclerView: RecyclerView,
+                viewHolder: RecyclerView.ViewHolder,
+                target: RecyclerView.ViewHolder
+            ): Boolean {
+                val startPosition = viewHolder.adapterPosition
+                val endPosition = target.adapterPosition
+
+                Collections.swap(habitosArrayList, startPosition, endPosition)
+                adapterHabitos.notifyItemMoved(startPosition, endPosition)
+
+                return true
+
+            }
+
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+                when (direction) {
+                    ItemTouchHelper.END ->
+
+                        activity?.let { "Done!".toast(it) }
+
+                    ItemTouchHelper.START ->
+                        activity?.let { "Not Done!".toast(it) }
+                }
+            }
+        }
+        ItemTouchHelper(swipeHandler).attachToRecyclerView(binding.recyclerHabitos)
+    }
 }

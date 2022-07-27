@@ -52,7 +52,7 @@ class NovoHabitoActivity : AppCompatActivity() {
     }
 
     private fun validarCampos() {
-        if (binding.editNomeHabito.text.isNotEmpty()) {
+        if (binding.editNomeHabito.text.isNotBlank()) {
             if (categoria.isNotEmpty()) {
                 if (turno.isNotEmpty()) {
                     saveData()
@@ -65,7 +65,10 @@ class NovoHabitoActivity : AppCompatActivity() {
 
     private fun setCategory() {
 
-        val categorias = arrayOf("Bem estar", "Foco", "Finanças", "Rotina noturna", "Atividade fisica", "Organização")
+        val categorias = arrayOf(
+            "Bem estar", "Foco", "Finanças", "Rotina noturna",
+            "Atividade fisica", "Organização"
+        )
 
         val dialog = AlertDialog.Builder(this)
             .setTitle("Selecione a categoria")
